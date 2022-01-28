@@ -134,7 +134,7 @@ def main():
     drift_generated = np.random.rand()
     theta_generated = np.random.rand()
     sigma = 1
-    sample_size = 100
+    sample_size = 20
     x_generated = generate_arima011_samples(drift_generated, theta_generated, sigma, sample_size)
     plt.plot(range(sample_size), x_generated)
     plt.xlabel("t")
@@ -143,7 +143,7 @@ def main():
     # initiating parameters for generating the ARIMA(0,1,1) series
     # plotting the generated series
 
-    train_size = 80
+    train_size = 14
     x_train = x_generated[:train_size]
     model = ARIMA011()
     pred_x = model_fit(x_train, model, 100, 0.1)
