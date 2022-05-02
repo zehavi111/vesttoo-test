@@ -146,7 +146,7 @@ def main():
     train_size = 14
     x_train = x_generated[:train_size]
     model = ARIMA011()
-    pred_x = model_fit(x_train, model, 100, 0.1)
+    pred_x = model_fit(x_train, model, 200, 0.1)
     plt.plot(range(train_size), x_train)
     plt.plot(range(train_size), pred_x.detach())
     plt.xlabel("t")
